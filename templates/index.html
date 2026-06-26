@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Bahasa Isyarat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Deteksi Bahasa Isyarat</h1>
+            <p class="subtitle">Indonesia Sign Language Detection</p>
+        </header>
+
+        <div class="main-grid">
+            <!-- Kiri: Video -->
+            <div class="video-section">
+                <div class="video-wrapper">
+                    <img src="" id="videoFeed" alt="">
+                    <div class="video-overlay" id="videoOverlay">
+                        <div class="overlay-content">
+                            <span>Kamera belum aktif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="camera-controls">
+                    <button onclick="startCamera()" id="btnStart" class="btn btn-start">
+                        ▶ Mulai Kamera
+                    </button>
+                    <button onclick="stopCamera()" id="btnStop" class="btn btn-stop" disabled>
+                        ⏹ Stop Kamera
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kanan: Info -->
+            <div class="info-section">
+                <!-- Deteksi sekarang -->
+                <div class="card">
+                    <div class="card-title">Deteksi</div>
+                    <div class="detection-display">
+                        <span id="currentChar">-</span>
+                    </div>
+                    <div class="conf-text" id="confText">Confidence: 0%</div>
+                </div>
+
+                <!-- Kalimat -->
+                <div class="card">
+                    <div class="card-title">Kalimat</div>
+                    <div class="kalimat-display" id="kalimat">-</div>
+                    <div class="kalimat-controls">
+                        <button onclick="clearKalimat()" class="btn btn-clear">Clear</button>
+                        <button onclick="hapusHuruf()" class="btn btn-hapus">Hapus</button>
+                        <button onclick="tambahSpasi()" class="btn btn-spasi">Spasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
