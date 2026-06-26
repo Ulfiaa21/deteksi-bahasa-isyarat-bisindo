@@ -4,12 +4,13 @@ env/
 __pycache__/
 *.pyc
 
-# Dataset (besar, sebaiknya tidak di-push penuh)
+# Dataset 
 dataset/images/
 dataset/labels/
 dataset/*.cache
+dataset/data.yaml
 
-# Hasil training (besar - seluruh folder runs/ diabaikan)
+# Hasil training 
 runs/
 
 # Debug screenshot dari detect.py
